@@ -1,0 +1,90 @@
+/*CRIAÇÃO DE POST E SUGESTÕES - (main__createPost-suggestions)*/
+.createPost__user {
+    margin-top: 78px;
+    display: flex;
+    gap: 12px;
+}
+
+.createPost__user-data {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 5px;
+
+}
+
+
+/*CRIAÇÃO DE UM NOVO POST - (createPost__container)*/
+
+
+
+/*FORM DE CRIAÇÃO DE UM NOVO POST - (form__container)*/
+  
+
+
+/*SUGESTÕES PARA SEGUIR - (suggestions__container)*/
+
+.main__createPost-suggestions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.suggestions__container {
+    margin-top: 50px;
+    padding-right: 100px; /*Ver se tem necessidade de colocá-lo*/
+}
+
+.suggestions__forYou {
+    margin-bottom: 20px;
+}
+
+.suggestions__list-users {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.suggestion__user-buttonFollow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.suggestions__user {
+   display: flex;
+   gap: 20px;
+   margin-bottom: 30px;
+}
+
+.suggestion__user-buttonFollow {
+    background-color: var(--color-whiteFixed);
+    color: var(--color-grey-1);
+    border: 1px solid var(--color-grey-1);
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.suggestion__user-buttonFollow:hover {
+    background-color: var(--color-whiteFixed);
+    color: var(--color-brand-2);
+    border-color: var(--color-brand-2);
+}
+
+/*LISTAGEM DE POSTS - (article__container)*/
+.article__user {
+    display: flex;
+    gap: 12px;
+}
+
+.article__button-openPost {
+    background-color: var(--color-grey-1);
+    color: var(--color-whiteFixed);
+}
+
+.article__button-openPost:hover {
+    background-color: var(--color-grey-0);
+}

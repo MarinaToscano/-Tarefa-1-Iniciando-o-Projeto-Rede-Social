@@ -1,0 +1,59 @@
+/*Imagens, estilização padrão*/
+.image-profile {
+    height: 3.125rem;
+}
+
+
+/*Nome de usuário*/
+.createPost__user-name, .suggestion__user-name, .article__user-name {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-title-2);
+    font-size: var(--font-size-title-2);
+    line-height: var(--line-height-title-2);
+}
+
+
+/*Profissão*/
+.createPost__user-occupation, .suggestion__user-occupation, .article__user-occupation {
+    color: var(--color-grey-2);
+    font-family: var(--font-family);
+    font-weight: var( --font-weight-text-2);
+    font-size: var(--font-size-text-2);
+    line-height: var(--line-height-text-2);
+}
+
+
+/*Título da seção de sugestões*/
+.suggestions__forYou {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-title-2);
+    font-size: var(--font-size-title-2);
+    line-height: var(--line-height-title-2);
+}
+
+
+/*Título da seção de posts*/
+.articles__allPosts-list {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-title-1);
+    font-size: var(--font-size-title-1);
+    line-height: var(--line-height-title-1);
+}
+
+
+/*Títulos dos posts na seção de listagem*/
+.article__user-title-post {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-title-1);
+    font-size: var(--font-size-title-1);
+    line-height: var(--line-height-title-1);
+}
+
+
+/*Conteúdo dos posts na seção de listagem*/
+.article__user-content-post {
+    font-family: var(--font-family);
+    font-weight: var( --font-weight-text-1);
+    font-size: var(--font-size-text-1);
+    line-height: var(--line-height-text-1);
+}

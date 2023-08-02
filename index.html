@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,149 +7,150 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/globalStyles.css">
     <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="stylesheet" href="./src/styles/sections.css">
 
     <!-- FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
 
     <title>Criando rede social</title>
   </head>
   <body>
     <!-- HEADER -->
     <header>
-      <img src="./src/assets/img/logo.svg" alt="" />
-      <p>Sair</p>
+      <img class="header__logo" src="./src/assets/img/logo.svg" alt="Imagem da logo" />
+      <p class="header__text">Sair</p>
     </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
-    <main>
+    <main class="main__container">
       <!-- ÁREA 1 (CRIAÇÃO DE POST E SUGESTÕES)-->
-      <section>
+      <section class="main__createPost-suggestions">
         <!-- CRIAÇÃO DE UM NOVO POST -->
-        <section>
-          <div>
-            <img src="./src/assets/img/user1.svg" alt="Samuel" />
-            <div>
-              <h2>Samuel Leão</h2>
-              <p>Front end Engineer</p>
+        <section class="createPost__container">
+          <div class="createPost__user">
+            <img class="createPost__user-image image-profile" src="./src/assets/img/user1.svg" alt="Samuel" />
+            <div class="createPost__user-data">
+              <h2 class="createPost__user-name">Samuel Leão</h2>
+              <p class="createPost__user-occupation">Front end Engineer</p>
             </div>
           </div>
 
           <!-- FORM DE CRIAÇÃO DE UM NOVO POST -->
-          <form>
+          <form class="form__container">
             <input
+            class="form__input"
               type="text"
               placeholder="Digite o título do post"
               required=""
             />
             <textarea
+            class="form__description"
               placeholder="Digite a descrição do post"
               name=""
               id=""
               cols="30"
-              rows="10"
+              rows="5"
               required=""
             ></textarea>
-            <button type="submit">Postar</button>
+            <button class="form__button text2--bold" type="submit">Postar</button>
           </form>
         </section>
 
         <!-- SUGESTÕES PARA SEGUIR -->
-        <section>
-          <h2>Sugestões para você seguir</h2>
-          <ul>
+        <section class="suggestions__container">
+          <h2 class="suggestions__forYou">Sugestões para você seguir</h2>
+          <ul class="suggestions__users-list">
             <!-- SUGESTÃO 1 -->
-            <li>
-              <div>
-                <img src="./src/assets/img/user2.svg" alt="Carlos Lima" />
-                <div>
-                  <h2>Carlos Lima</h2>
-                  <p>UX e UI Designer</p>
+            <li class="suggestions__list-users">
+              <div class="suggestions__user">
+                <img class="suggestion__user-image image-profile" src="./src/assets/img/user2.svg" alt="Carlos Lima" />
+                <div class="suggestion__user-data">
+                  <h2 class="suggestion__user-name">Carlos Lima</h2>
+                  <p class="suggestion__user-occupation">UX e UI Designer</p>
                 </div>
               </div>
-              <button>Seguir</button>
+              <button class="suggestion__user-buttonFollow text2--bold">Seguir</button>
             </li>
             <!-- SUGESTÃO 2 -->
-            <li>
-              <div>
-                <img src="./src/assets/img/user3.svg" alt="Rafael Bertoldo" />
-                <div>
-                  <h2>Rafael Bertoldo</h2>
-                  <p>Devop's</p>
+            <li class="suggestions__list-users">
+              <div class="suggestions__user">
+                <img class="suggestion__user-image image-profile" src="./src/assets/img/user3.svg" alt="Rafael Bertoldo" />
+                <div class="suggestion__user-data">
+                  <h2 class="suggestion__user-name">Rafael Bertoldo</h2>
+                  <p class="suggestion__user-occupation">Devop's</p>
                 </div>
               </div>
-              <button>Seguir</button>
+              <button class="suggestion__user-buttonFollow text2--bold">Seguir</button>
             </li>
             <!-- SUGESTÃO 3 -->
-            <li>
-              <div>
-                <img src="./src/assets/img/user4.svg" alt="Júlia Martins" />
-                <div>
-                  <h2>Júlia Martins</h2>
-                  <p>Fullstack Engineer</p>
+            <li class="suggestions__list-users">
+              <div class="suggestions__user">
+                <img class="suggestion__user-image image-profile" src="./src/assets/img/user4.svg" alt="Júlia Martins" />
+                <div class="suggestion__user-data">
+                  <h2 class="suggestion__user-name">Júlia Martins</h2>
+                  <p class="suggestion__user-occupation">Fullstack Engineer</p>
                 </div>
               </div>
-              <button>Seguir</button>
+              <button class="suggestion__user-buttonFollow text2--bold">Seguir</button>
             </li>
           </ul>
         </section>
       </section>
 
       <!-- ÁREA 2 (LISTAGEM DE POSTS) -->
-      <section>
-        <h2>Posts</h2>
+      <section class="article__container">
+        <h2 class="articles__allPosts-list">Posts</h2>
         <!-- POST 1 -->
-        <article>
-          <div>
-            <img src="./src/assets/img/user5.svg" alt="Iris Silva" />
-            <div>
-              <h2>Iris Silva</h2>
-              <p>Front end Engineer</p>
+        <article class="article__publication">
+          <div class="article__user">
+            <img class="article__user-image image-profile" src="./src/assets/img/user5.svg" alt="Iris Silva" />
+            <div class="article__user-data">
+              <h2 class="article__user-name">Iris Silva</h2>
+              <p class="article__user-occupation">Front end Engineer</p>
             </div>
           </div>
-          <h2>
+          <h2 class="article__user-title-post">
             Empresa de Tecnologia da Informação abre vagas para programa de
             estágio
           </h2>
-          <p>
+          <p class="article__user-content-post">
             A Framework Digital, empresa mineira especializada em Tecnologia da
             Informação, irá iniciar o seu sexto programa de estágio, com o prazo
             de inscrições entre os dias 08 e 28 de agosto. O programa é
             conhecido como Framework Padawans, com inspiração nos filmes Star
             Wars. Nas histórias, os iniciantes fazem treinamentos para se tornar
             cavaleiros Jedi, que compõem o lado bom da força.
-          </p>
-          <div>
-            <button>Abrir Post</button>
-            <div>
+          </p>    
+          <div class="article__otherActions-interaction">
+            <button class="article__button-openPost text2--bold">Abrir Post</button>
+            <div class="article__likes-number">
               <img
+                class="article__like-post"
                 src="./src/assets/img/gray-heart.svg"
                 alt="Empty Heart(Post not liked)"
               />
-              <small>25</small>
+              <small class="article__numberLikes-post">25</small>
             </div>
           </div>
         </article>
 
         <!-- POST 2 -->
-        <article>
-          <div>
-            <img src="./src/assets/img/user6.svg" alt="Carla Maria" />
-            <div>
-              <h2>Carla Maria</h2>
-              <p>Back end Engineer</p>
+        <article class="article__publication">
+          <div class="article__user">
+            <img class="article__user-image image-profile" src="./src/assets/img/user6.svg" alt="Carla Maria" />
+            <div class="article__user-data">
+              <h2 class="article__user-name">Carla Maria</h2>
+              <p class="article__user-occupation">Back end Engineer</p>
             </div>
           </div>
-          <h2>
+          <h2 class="article__user-title-post">
             Programa de estágio abre vagas em Segurança da Informação com regime
             remoto
           </h2>
-          <p>
+          <p class="article__user-content-post">
             Em Segurança da Informação, as vagas são destinadas às áreas de
             Security Operations Center (SOC), Administração de Dispositivos de
             Segurança (ADS), Resposta a Incidentes (RI), Segurança e Privacidade
@@ -158,31 +159,32 @@
             da Informação, Tecnologia da Informação e afins, com previsão de
             conclusão do curso de fevereiro de 2023 a fevereiro de 2025.
           </p>
-          <div>
-            <button>Abrir Post</button>
-            <div>
+          <div class="article__otherActions-interaction">
+            <button class="article__button-openPost text2--bold">Abrir Post</button>
+            <div class="article__likes-number">
               <img
+                class="article__like-post"
                 src="./src/assets/img/gray-heart.svg"
                 alt="Empty Heart(Post not liked)"
               />
-              <small>19</small>
+              <small class="article__numberLikes-post">19</small>
             </div>
           </div>
         </article>
 
         <!-- POST 3 -->
-        <article>
-          <div>
-            <img src="./src/assets/img/user7.svg" alt="João Carvalho" />
-            <div>
-              <h2>João Carvalho</h2>
-              <p>Devop's</p>
+        <article class="article__publication">
+          <div class="article__user">
+            <img class="article__user-image image-profile" src="./src/assets/img/user7.svg" alt="João Carvalho" />
+            <div class="article__user-data">
+              <h2 class="article__user-name">João Carvalho</h2>
+              <p class="article__user-occupation">Devop's</p>
             </div>
           </div>
-          <h2>
+          <h2 class="article__user-title-post">
             O que é programação orientada a objetos e programação funcional
           </h2>
-          <p>
+          <p class="article__user-content-post">
             A Programação Funcional é uma orientação focada na programação
             declarativa. Conhecendo mais a programação funcional a partir de
             códigos podemos nos deparar de primeira com o conceito mais central
@@ -194,14 +196,15 @@
             (vão para o objeto) ou estáticos (não são instanciados, ou seja, não
             vão para o objeto), e isso tem seu lado bom e ruim.
           </p>
-          <div>
-            <button>Abrir Post</button>
-            <div>
+          <div class="article__otherActions-interaction">
+            <button class="article__button-openPost text2--bold">Abrir Post</button>
+            <div class="article__likes-number">
               <img
+                class="article__like-post"
                 src="./src/assets/img/gray-heart.svg"
                 alt="Empty Heart(Post not liked)"
               />
-              <small>8</small>
+              <small class="article__numberLikes-post">8</small>
             </div>
           </div>
         </article>
