@@ -102,5 +102,34 @@ button {
 
 @media (max-width: 1024px) {
 
+    .createPost__container {
+        max-width: 100%;
+    }
+    
+    .main__createPost-suggestions {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
 
+    .suggestions__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .suggestions__users-list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .suggestions__list-users {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    
+    .suggestions__forYou {
+        display: flex;
+        margin-bottom: 60px;
+    }
 }

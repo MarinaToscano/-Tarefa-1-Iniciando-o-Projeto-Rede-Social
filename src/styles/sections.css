@@ -95,7 +95,7 @@ textarea:focus {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    gap: 0.625rem;
 }
 
 .suggestions__container {
