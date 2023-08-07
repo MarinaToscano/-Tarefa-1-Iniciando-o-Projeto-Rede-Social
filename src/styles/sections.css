@@ -1,8 +1,8 @@
 /*CRIAÇÃO DE POST E SUGESTÕES - (main__createPost-suggestions)*/
 .createPost__user {
-    margin-top: 78px;
+    margin-top: 4.875rem;
     display: flex;
-    gap: 12px;
+    gap: 0.75rem;
     /* margin-bottom: 10px; */
 }
 
@@ -120,6 +120,10 @@ textarea:focus {
    margin-bottom: 30px;
 }
 
+.suggestion__user-data {
+    white-space: nowrap;
+}
+
 .suggestion__user-buttonFollow {
     display: flex;
     flex-direction: row;
@@ -159,6 +163,7 @@ textarea:focus {
     gap: 5px;
     margin-bottom: 50px;
 }
+
 
 .article__user-title-post {
     /* width: 100%; 
@@ -202,4 +207,136 @@ textarea:focus {
     display: flex;
     flex-direction: row;
     padding-top: 2.5px;
+}
+
+
+/*MEDIA QUERY para telas abaixo de 1025px*/
+@media (max-width: 1024px) {
+    
+    .main__createPost-suggestions {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .createPost__container {
+        width: 100%;
+    }
+    
+    /*Section suggestions*/
+    .suggestions__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column; 
+        padding: 0;
+    }
+    /*Título da sessão de sugestões*/
+    .suggestions__forYou {
+        width: 100%;
+        display: flex;
+        margin-bottom: 3.75rem;
+    }
+
+    /*Ul*/
+    .suggestions__users-list {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    /*LI - Contém todos os elementos*/
+    .suggestions__list-users {
+        min-width: 8.125rem;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 30px 0px 0px;
+        gap: 0;
+    }
+    /*Div que contém imagem, nome e ocupação*/
+    .suggestions__user {
+        display: flex;
+    }
+    /*Div que contém nome e ocupação*/
+    .suggestion__user-data {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3125rem;
+    }
+    /*Botão*/
+    .suggestion__user-buttonFollow {
+        display: flex;
+        align-items: center;
+        width: 5rem;
+    }
+}
+
+
+/*MEDIA QUERY para telas abaixo de 860px*/
+/*640px*/
+@media (max-width: 860px) {
+    
+    .main__createPost-suggestions {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 90%;
+    }
+
+    .createPost__container {
+        width: 100%;
+    }
+    
+    /*Section suggestions*/
+    .suggestions__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start;
+        padding: 0;
+        overflow-x: scroll;
+    }
+    /*Título da sessão de sugestões*/
+    .suggestions__forYou {
+        width: 100%;
+        display: flex;
+        margin-bottom: 3.75rem;
+    }
+
+    /*Ul*/
+    .suggestions__users-list {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 3rem;
+        white-space: nowrap;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+    /*LI - Contém todos os elementos*/
+    .suggestions__list-users {
+        min-width: 8.125rem;
+        display: flex;
+        flex-direction: column;
+    }
+    /*Div que contém imagem, nome e ocupação*/
+    .suggestions__user {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    /*Div que contém nome e ocupação*/
+    .suggestion__user-data {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3125rem;
+    }
+    /*Botão*/
+    .suggestion__user-buttonFollow {
+        display: flex;
+        align-items: center;
+        width: 5rem;
+    }
 }

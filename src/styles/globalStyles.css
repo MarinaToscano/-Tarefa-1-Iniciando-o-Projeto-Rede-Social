@@ -2,8 +2,11 @@
 
 
 body {
+    position: absolute;
+    padding-top: 78px;
     font-family: 'Inter', sans-serif;
     margin: 0 auto;
+    width: 100% auto;
 }
 
 
@@ -62,14 +65,12 @@ body {
 }
 
 
-main {
-    width: 90% auto;
-    padding-left: 100px;
-}   
-
-
 
 header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     padding: 30px 100px 30px 100px;
     background-color: var(--color-grey-1);
     display: flex;
@@ -87,6 +88,14 @@ header {
 
 
 
+
+main {
+    width: 90% auto;
+    padding-left: 100px;
+}   
+
+
+
 button {
     font-family: var(--font-family);
     height: 36px;
@@ -98,38 +107,4 @@ button {
 .text2--bold {
     font-weight: 600;
     font-size: var(--font-size-text-2);
-}
-
-@media (max-width: 1024px) {
-
-    .createPost__container {
-        max-width: 100%;
-    }
-    
-    .main__createPost-suggestions {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 100%;
-    }
-
-    .suggestions__container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .suggestions__users-list {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .suggestions__list-users {
-        display: flex;
-        flex-wrap: wrap;
-        
-    }
-    
-    .suggestions__forYou {
-        display: flex;
-        margin-bottom: 60px;
-    }
 }
