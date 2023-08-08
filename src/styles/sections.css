@@ -280,8 +280,11 @@ textarea:focus {
     
     .main__createPost-suggestions {
         display: flex;
+        /*max-width: 90%; */
         flex-wrap: wrap;
-        max-width: 90%;
+        gap: 1rem; /*Precisa? */
+        justify-content: flex-start; /*Precisa? */
+        /* overflow-x: auto; Precisa? */
     }
 
     .createPost__container {
@@ -295,7 +298,7 @@ textarea:focus {
         flex-direction: column; 
         align-items: flex-start;
         padding: 0;
-        overflow-x: scroll;
+        /* overflow-x: scroll; */
     }
     /*Título da sessão de sugestões*/
     .suggestions__forYou {
@@ -312,14 +315,16 @@ textarea:focus {
         flex-wrap: nowrap;
         gap: 3rem;
         white-space: nowrap;
-        overflow-y: auto;
-        overflow-x: auto;
+        /* overflow-y: auto;
+        overflow-x: auto; */
     }
     /*LI - Contém todos os elementos*/
     .suggestions__list-users {
         min-width: 8.125rem;
         display: flex;
         flex-direction: column;
+        /* flex: 0 0 auto; Precisa? */
+        align-items: start; 
     }
     /*Div que contém imagem, nome e ocupação*/
     .suggestions__user {

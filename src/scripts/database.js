@@ -83,3 +83,4 @@ export const suggestUsers = [
     img: "./src/assets/img/user7.svg",
   },
 ];
+
