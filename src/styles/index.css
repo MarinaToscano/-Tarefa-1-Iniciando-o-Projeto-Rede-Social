@@ -57,3 +57,49 @@
     font-size: var(--font-size-text-1);
     line-height: var(--line-height-text-1);
 }
+
+/*Cursor para os likes*/
+.article__like-post {
+    cursor: pointer;
+}
+
+/*DIALOG*/
+.modal__controller {
+    width: 50%;
+    height: 60%;
+    top: 30px;
+    padding: 0;
+    border-radius: var(--radius-2);
+    border-color: var(--color-whiteFixed);
+}
+
+.modal__controller::backdrop {
+    background-color: rgba(33, 37, 41, 0.5);
+}
+
+.modal__container {
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px 0px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.modal__close {
+    font-family: var(--font-family);
+    color: var(--color-grey-3);
+    font-weight: var(--font-weight-text-1);
+    font-size: var(--font-size-text-3);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-grey-5);
+    border-radius: 150px;
+    cursor: pointer;    
+}
