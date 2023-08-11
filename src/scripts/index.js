@@ -1,3 +1,4 @@
+import {posts} from './database.js'
 //Evento para o botão 'Abrir post' - para abrir o modal quando clicado
 function handleModal() {
     const modalController = document.querySelector('.modal__controller');
@@ -5,7 +6,14 @@ function handleModal() {
   
     buttonsPosts.forEach(buttonOnlyPost => {
         buttonOnlyPost.addEventListener('click', function() {
-          modalController.showModal();
+            const post = posts.find(element =>{
+                if (element.id == buttonOnlyPost.id) {
+                    return true
+                }
+            })
+            createModal(post)
+            modalController.showModal();
+            closeModal()
         })
     })
 }
@@ -21,7 +29,7 @@ function closeModal() {
         modalController.close();
     })
 }
-closeModal()
+
 
 
 //Evento para o 'botão' do like - para que quando clicado, o coração mude para a cor vermelha
@@ -56,7 +64,84 @@ function colorLike() {
 colorLike();
 
 
+/*Evento de click nos botões de seguir*/
+function followUser() {
+    const buttonFollow = document.querySelectorAll('.suggestion__user-buttonFollow');
+
+    buttonFollow.forEach((follow) => {
+        follow.addEventListener('click', function() {
+            if (this.classList.contains('suggestion__user-buttonFollow--active')) {
+                this.classList.remove('suggestion__user-buttonFollow--active');
+            } else {
+                this.classList.add('suggestion__user-buttonFollow--active');
+            }
+        });
+    });
+}
+followUser();
+
+
 /*Evento de click para fechar o DIALOG quando a área de fora for clicada*/
-function myModal() {
-    
+
+
+/*Criando DIALOG*/
+function createModal(post) {
+    const modalController = document.querySelector('.modal__controller')
+    modalController.innerHTML = ""
+
+    //Criando os elementos do modal
+    const modalContainer = document.createElement('div')
+    const modalClose = document.createElement('span')
+    const modalForm = document.createElement('form')
+    const formUser = document.createElement('div')
+    const formHeader = document.createElement('div')
+    const formUserImage = document.createElement('img')
+    const formUserData = document.createElement('div')
+    const formUserName = document.createElement('h2')
+    const formUserOccupation = document.createElement('p')
+    const formUserTitlePost = document.createElement('h2')
+    const formUserContentPost = document.createElement('p')
+
+
+    //Adicionando as classes aos elementos
+    modalContainer.classList.add('modal__container')
+
+    modalClose.classList.add('modal__close')
+    modalClose.textContent = "X"
+
+    modalForm.classList.add('modal__form')
+    formUser.classList.add('form__user')
+    formHeader.classList.add('form__header')
+
+    formUserImage.classList.add('form__user-image')
+    formUserImage.innerHTML = ""
+    formUserImage.src = post.img
+    formUserImage.alt = post.user
+
+    formUserData.classList.add('form__user-data')
+
+    formUserName.classList.add('form__user-name')
+    formUserName.innerHTML = ""
+    formUserName.textContent = post.user
+
+    formUserOccupation.classList.add('form__user-occupation')
+    formUserOccupation.innerHTML = ""
+    formUserOccupation.textContent = post.stack
+
+    formUserTitlePost.classList.add('form__user-title-post')
+    formUserTitlePost.innerHTML = ""
+    formUserTitlePost.textContent = post.title
+
+    formUserContentPost.classList.add('form__user-content-post')
+    formUserContentPost.innerHTML = ""
+    formUserContentPost.textContent = post.text
+
+
+    //Adicionando a hierarquia dos elementos
+    formUserData.append(formUserName, formUserOccupation)
+    formHeader.append(formUserImage, formUserData);
+    formUser.append(formHeader, formUserTitlePost, formUserContentPost);
+    modalForm.appendChild(formUser);
+    modalContainer.append(modalClose, modalForm);
+    modalController.appendChild(modalContainer);
 }

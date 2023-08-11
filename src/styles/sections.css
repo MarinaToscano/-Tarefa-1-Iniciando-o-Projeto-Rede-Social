@@ -131,12 +131,20 @@ textarea:focus {
     background-color: var(--color-whiteFixed);
     color: var(--color-grey-1);
     border: 1px solid var(--color-grey-1);
-    border-radius: 0;
+    border-radius: 2px;
     height: 30px;
     margin-bottom: 15px;
 }
 
-.suggestion__user-buttonFollow:hover {
+.suggestion__user-buttonFollow--active {
+    color: var(--color-whiteFixed);
+    background: var(--color-brand-1);
+    border-radius: 2px;
+    border: 1px solid var(--color-brand-1);
+}
+
+
+.suggestion__user-buttonFollow:not(.suggestion__user-buttonFollow--active):hover {
     background-color: var(--color-whiteFixed);
     color: var(--color-brand-2);
     border-color: var(--color-brand-2);
